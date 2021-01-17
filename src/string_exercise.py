@@ -3,29 +3,24 @@ class StringExercise:
     def __init__(self):
         pass   # Do some initial setup in this constructor method, if needed
 
-    def reverse_string(self, input_str):
-        """
-        Reverses order of characters in string input_str.
-        """
-        return None
+    def reverse_string(self, string):
+        string = string[::-1] 
+        return string 
+       
 
-    def is_english_vowel(self, character):
-        """
-        Returns True if character is an english vowel
-        and False otherwise.
-        """
-        return None
+    def is_english_vowel(self, ch):
+        if(ch=='A' or ch=='a' or ch=='E' or ch =='e' or ch=='I'or ch=='i' or ch=='O' or ch=='o' or ch=='U' or ch=='u'):
+            return True
+        else:
+            return False
 
     def find_longest_word(self, sentence):
-        """
-        Returns the longest word in string sentence.
-        In case there are several, return the first.
-        """
-        return None
+        longest = max(sentence.split(), key=len)
+        return longest
 
-    def get_word_lengths(self, text):
-        """
-        Returns a list of integers representing
-        the word lengths in string text.
-        """
-        return None
+    def get_word_lengths(self, str):
+        str = str.split (' ')
+        result=[]
+        for words in str:
+            result.append(len(words))
+        return result
